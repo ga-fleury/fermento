@@ -3,7 +3,7 @@ window.setup = function setup() {
 }
 
 window.draw = function draw() {
-  createCanvas(800, 800);
+  createCanvas(1000, 1000);
 
 
   let center = createVector(width / 2, height / 2);
@@ -20,25 +20,26 @@ window.draw = function draw() {
   let g = round(random(0,36))*10;
   let h = round(random(0,36))*10;
  
-
+  
   // remove elementos da array colors até só sobrarem 4
   for (var i = 0; i < 2; i++) {
     let colorPicker = round(random(0, colors.length-1));
     colors.splice(colorPicker, 1);
   }
-
+  
   // embaralha a array colors
   for (var i = colors.length - 1; i > 0; i--) {
-      var j = Math.floor(Math.random() * (i + 1));
-      var temp = colors[i];
-      colors[i] = colors[j];
-      colors[j] = temp;
+    var j = Math.floor(Math.random() * (i + 1));
+    var temp = colors[i];
+    colors[i] = colors[j];
+    colors[j] = temp;
   }
-
-
-
+  
+  
+  
   translate(center.x, center.y)
-
+  scale(4)
+  
   rotate(a);
 
   //yellow
@@ -133,7 +134,7 @@ window.mouseClicked = function mouseClicked(){
   redraw();
 }
 
-function keyPressed() {
+window.keyPressed = function keyPressed() {
   if (keyCode === BACKSPACE){
     saveCanvas('myCanvas', 'png');
   }

@@ -121,7 +121,7 @@ parcelRequire = (function (modules, cache, entry, globalName) {
 window.setup = function setup() {};
 
 window.draw = function draw() {
-  createCanvas(800, 800);
+  createCanvas(1000, 1000);
   var center = createVector(width / 2, height / 2);
   var colors = ['#0F8FE6', '#ff7b00', '#AB76FF', '#FFEA00', '#F53800', '#06CBAD'];
   strokeWeight(7);
@@ -150,6 +150,7 @@ window.draw = function draw() {
   }
 
   translate(center.x, center.y);
+  scale(4);
   rotate(a); //yellow
 
   stroke(colors[0]); //outline
@@ -211,11 +212,11 @@ window.mouseClicked = function mouseClicked() {
   redraw();
 };
 
-function keyPressed() {
+window.keyPressed = function keyPressed() {
   if (keyCode === BACKSPACE) {
     saveCanvas('myCanvas', 'png');
   }
-}
+};
 },{}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
@@ -244,7 +245,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "59411" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "54496" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

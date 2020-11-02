@@ -1,0 +1,17 @@
+{
+  "name": "fermento",
+  "version": "1.0.0",
+  "description": "",
+  "main": "fermento.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "parcel index.html --no-source-maps",
+    "build": "parcel build index.html --no-source-maps"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "parcel-bundler": "^1.12.4"
+  }
+}

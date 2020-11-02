@@ -118,9 +118,9 @@ parcelRequire = (function (modules, cache, entry, globalName) {
 
   return newRequire;
 })({"fermento.js":[function(require,module,exports) {
-function setup() {}
+window.setup = function setup() {};
 
-function draw() {
+window.draw = function draw() {
   createCanvas(800, 800);
   var center = createVector(width / 2, height / 2);
   var colors = ['#0F8FE6', '#ff7b00', '#AB76FF', '#FFEA00', '#F53800', '#06CBAD'];
@@ -204,12 +204,12 @@ function draw() {
   arc(0, 0 - 85, 30, 30, 90, 270);
   arc(0 + 85, 0, 30, 30, 0, 180);
   noLoop();
-}
+};
 
-function mouseClicked() {
+window.mouseClicked = function mouseClicked() {
   noCanvas();
   redraw();
-}
+};
 
 function keyPressed() {
   if (keyCode === BACKSPACE) {
@@ -244,7 +244,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "58880" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "59411" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

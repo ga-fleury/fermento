@@ -1,8 +1,8 @@
-function setup() {
+window.setup = function setup() {
 
 }
 
-function draw() {
+window.draw = function draw() {
   createCanvas(800, 800);
 
 
@@ -126,10 +126,9 @@ function draw() {
   
   noLoop();
 
-
 }
 
-function mouseClicked(){
+window.mouseClicked = function mouseClicked(){
   noCanvas();
   redraw();
 }

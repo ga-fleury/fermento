@@ -7,7 +7,7 @@ window.draw = function draw() {
 
 
   let center = createVector(width / 2, height / 2);
-  let colors = ['#0F8FE6', '#ff7b00', '#AB76FF', '#FFEA00', '#F53800', '#06CBAD' ]
+  let colors = ['#118ab2', '#06d6a0', '#ffd166', '#ef476f' ]
   strokeWeight(7);
   angleMode(DEGREES);
   noFill();
@@ -22,10 +22,10 @@ window.draw = function draw() {
  
   
   // remove elementos da array colors até só sobrarem 4
-  for (var i = 0; i < 2; i++) {
-    let colorPicker = round(random(0, colors.length-1));
-    colors.splice(colorPicker, 1);
-  }
+  // for (var i = 0; i < 2; i++) {
+  //   let colorPicker = round(random(0, colors.length-1));
+  //   colors.splice(colorPicker, 1);
+  // }
   
   // embaralha a array colors
   for (var i = colors.length - 1; i > 0; i--) {
